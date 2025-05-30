@@ -16,7 +16,7 @@ def add(a: int, b: int) -> int:
 
 
 @mcp.resource("movie://data")
-async def weather_data() -> dict:
+async def movie_data() -> dict:
     return {"name": "Pulp Fiction", "year": 1994, "director": "Quentin Tarantino"}
 
 @mcp.prompt()
