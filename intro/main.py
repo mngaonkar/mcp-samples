@@ -14,16 +14,14 @@ def add(a: int, b: int) -> int:
     """
     return a + b
 
-@mcp.resource("greetings://{name}")
-def get_greetings(name: str) -> str:
-    """
-    Get a greeting message for the given name.
-    Args:
-    name (str): The name to greet.
-    Returns:
-    str: A greeting message.
-    """
-    return f"Hello, {name}!"
+
+@mcp.resource("movie://data")
+async def weather_data() -> dict:
+    return {"name": "Pulp Fiction", "year": 1994, "director": "Quentin Tarantino"}
+
+@mcp.prompt()
+async def user_query_template() -> str:
+    return "Generate a SQL query to retrieve user data from a table named 'users' with columns 'id', 'name', and 'email' where {condition}."
 
 if __name__ == '__main__':
     # Run the FastMCP server
