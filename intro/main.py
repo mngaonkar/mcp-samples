@@ -27,6 +27,4 @@ def get_greetings(name: str) -> str:
 
 if __name__ == '__main__':
     # Run the FastMCP server
-    # mcp.run()
-    # Uncomment the following line to run the FastMCP server with a specific port
-    mcp.run(port=8000)
+    mcp.run()

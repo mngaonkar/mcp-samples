@@ -6,7 +6,7 @@ from fastmcp.client.transports import (
 )
 
 async def main():
-    async with Client("/Users/mahadevgaonkar/code/mcp-server/demo-1/main.py") as client:
+    async with Client("/Users/mahadevgaonkar/github/mcp-samples/intro/main.py") as client:
         tools = await client.list_tools()
         print(tools)
 
